@@ -1,0 +1,60 @@
+/*Constantes*/
+
+:root{
+    --FuentePrincipal:'Nanum Myeongjo', serif;
+    --blanco:#FFFFFF;
+    --negro:#000000;
+}
+
+/*Configuracion inicial*/
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px;
+}
+
+/*Header*/
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header img , 
+.header .IconoxHeader img{
+    width: 6rem;
+}
+
+.Navegacion{
+    background-color: black;
+    display:flex;
+    justify-content:center;
+}
+
+.Navegacion .TxtNv{
+    margin: 0 1rem;
+}
+
+.Navegacion .TxtNv p{
+    color:white;
+    font-size: 3rem;
+    font-family: var(--FuentePrincipal);
+}
+
+/*main*/
+
+.main{
+    text-align: center;
+}
+
+.Eslogan{
+    font-family: var(--FuentePrincipal);
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.EsloganTexto{
+    font-family: var(--FuentePrincipal);
+    font-size: 2rem;
+}

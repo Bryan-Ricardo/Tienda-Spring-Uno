@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8"/>
     <title th:text="${titulo}"></title>
+    <!--MIS FUENTES-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 </head>
 <body>
-    <h1 th:text="${titulo}">
-    </h1>
+  <header class="header">
+    <img th:src="@{/img/Logo.png}" alt="Imagen 1"/>
+    <div class="IconosHeader">
+      <img th:src="@{/img/Icono_Carrito.png}" alt="Imagen 2"/>
+      <img th:src="@{/img/Icono_Buscar.png}" alt="Imagen 4"/>
+      <img th:src="@{/img/Icono_Opciones.png}" alt="Imagen 3"/>
+  
+  </div>
+  </header>
+  <nav class="Navegacion">
+    <div class="TxtNv">
+      <p>Nuevos Lanzamientos</p>  
+    </div>
+    <div class="TxtNv">
+      <p>Hombre</p>
+    </div>
+    <div class="TxtNv">
+      <p>Mujer</p>
+    </div>
+    <div class="TxtNv">
+      <p>Rebajas</p>
+    </div>
+  </nav>
+  
+  <main class="main">
+    <h2 class="Eslogan">
+      El Verano Nunca Para
+    </h2>
+    <p class="EsloganTexto">
+      Juega. Diviertete.Repite.Esta temporada, subele el volumen con estilos hechos para vivir la vida al maximo
+    </p>
+  </main> 
 </body>
 </html>
