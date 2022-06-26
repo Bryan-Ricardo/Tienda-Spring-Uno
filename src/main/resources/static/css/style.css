@@ -1,60 +1,142 @@
-/*Constantes*/
-
-:root{
-    --FuentePrincipal:'Nanum Myeongjo', serif;
-    --blanco:#FFFFFF;
-    --negro:#000000;
-}
-
-/*Configuracion inicial*/
+/*Configuraciones iniciales*/
 html{
-    font-size: 62.5%;
+    font-size:62.5%;
 }
-
 body{
-    font-size: 16px;
+    font-size: 14px;
+}
+/*Seudoselectores*/
+:root{
+    /*fuentes*/
+    --fuente_principal:'Cormorant Garamond', serif;
+    --fuente_secundaria: 'Nanum Myeongjo', serif;
+
+    /*Colores*/
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris: #B2B2B2;
 }
 
-/*Header*/
-.header{
+/*PAGINA INCIO*/
+/*header*/
+
+header .imgs_header{
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
 }
 
-.header img , 
-.header .IconoxHeader img{
-    width: 6rem;
+header .imgs_header img{
+    height: 7rem;
 }
-
-.Navegacion{
-    background-color: black;
+/*Barra superior*/
+.barra_superior{
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
 }
 
-.Navegacion .TxtNv{
-    margin: 0 1rem;
+.barra_superior .texto_logo p{
+    text-transform: uppercase;
+    margin-bottom: 3rem;
 }
 
-.Navegacion .TxtNv p{
-    color:white;
+.barra_superior nav a{
+    text-decoration: none;
+    color: black;
+}
+
+.barra_superior .texto_logo p,
+.barra_superior nav a{
     font-size: 3rem;
-    font-family: var(--FuentePrincipal);
+    font-family: var(--fuente_principal);
 }
 
-/*main*/
+.barra_superior nav{
+    margin: 3rem 0 3rem 0;
+}
+.barra_superior nav a{
+    margin: 1rem;
+}
 
-.main{
+/*Buscador*/
+
+.buscador .cajaBuscador{
+    display:flex;
+}
+
+.buscador .cajaBuscador #id_buscador{
+    text-decoration: none;
+    height: 5rem;
+    border: 0;
+    margin-bottom: 15rem;
+    -webkit-box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.75);
+    margin:0 1rem 0 0;
+    font-size: 2rem;
+    font-family: var(--fuente_secundaria);
+}
+
+.buscador .cajaBuscador #id_button{
+    padding:0;
+    margin: 0;
+    border:0;
+    height: 5rem;
+    width: 6rem;
+    background-color: var(--negro);
+    -webkit-box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.75);
+}
+.buscador .cajaBuscador #id_button img{
+    height:6rem;
+}
+
+/*Contenido principal*/
+.contenido_telefonos{
+    /*min-height: 140rem;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.2rem;
+    font-size: 1.5rem;
+    font-family: var(--fuente_secundaria);
+}
+
+.contenido_telefonos .caja_telefono{
+    padding:1rem;
+    border: 1px solid var(--gris);
     text-align: center;
 }
 
-.Eslogan{
-    font-family: var(--FuentePrincipal);
-    font-size: 6rem;
-    text-transform: uppercase;
+.contenido_telefonos .caja_telefono .imagen_telefono img{
+    height: 40rem;
+}
+/*IMagen si no existen resultados*/
+.contenido_telefonos .caja_img_sin_resultados{
+    text-align:center;
+    display:block;
 }
 
-.EsloganTexto{
-    font-family: var(--FuentePrincipal);
-    font-size: 2rem;
+.contenido_telefonos .caja_img_sin_resultados img{
+    height: 100rem;
+}
+/*Footer*/
+footer{
+    background-color: black;
+}
+/*
+footer .imagen_footer{
+    position:relative;
+    display: inline-block;
+    text-align: center;
+    height:25rem;
+}
+*/
+
+footer .iconos_contacto{
+    display:flex;
+    justify-content: center;
+}
+
+footer .iconos_contacto img{
+    height: 10rem;
 }

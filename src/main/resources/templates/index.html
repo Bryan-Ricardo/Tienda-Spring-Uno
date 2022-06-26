@@ -1,47 +1,229 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8"/>
-    <title th:text="${titulo}"></title>
-    <!--MIS FUENTES-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <link rel="stylesheet" th:href="@{css/style.css}">
+  <!--FUENTES-->
+  <!--Fuente principal-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <!--Fuente secundaria-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 </head>
 <body>
-  <header class="header">
-    <img th:src="@{/img/Logo.png}" alt="Imagen 1"/>
-    <div class="IconosHeader">
-      <img th:src="@{/img/Icono_Carrito.png}" alt="Imagen 2"/>
-      <img th:src="@{/img/Icono_Buscar.png}" alt="Imagen 4"/>
-      <img th:src="@{/img/Icono_Opciones.png}" alt="Imagen 3"/>
-  
+<header>
+  <div class="imgs_header">
+    <img th:src="@{img/icono_carrito.png}" alt=""/>
+    <img th:src="@{img/Logo_usuario.png}" alt=""/>
   </div>
-  </header>
-  <nav class="Navegacion">
-    <div class="TxtNv">
-      <p>Nuevos Lanzamientos</p>  
-    </div>
-    <div class="TxtNv">
-      <p>Hombre</p>
-    </div>
-    <div class="TxtNv">
-      <p>Mujer</p>
-    </div>
-    <div class="TxtNv">
-      <p>Rebajas</p>
-    </div>
-  </nav>
-  
-  <main class="main">
-    <h2 class="Eslogan">
-      El Verano Nunca Para
-    </h2>
-    <p class="EsloganTexto">
-      Juega. Diviertete.Repite.Esta temporada, subele el volumen con estilos hechos para vivir la vida al maximo
+</header>
+<div class="barra_superior">
+  <div class="texto_logo">
+    <p>
+      phonestore
     </p>
-  </main> 
+  </div>
+  <nav>
+    <a href="" target="_blank">Inicio</a>
+    <a href="" target="_blank">Novedades</a>
+    <a href="" target="_blank">Rebajas</a>
+    <a href="" target="_blank">Inventario</a>
+  </nav>
+</div>
+<main>
+  <div class="buscador">
+    <div class="cajaBuscador">
+      <input type="text" value="" name="" id="id_buscador"/>
+      <div id="id_button">
+        <img th:src="@{img/lupa.png}" alt=""/>
+      </div>
+    </div>
+    <div class="img_buscador">
+      <img src="" alt=""/>
+    </div>
+  </div>
+  <div class="contenido_telefonos">
+    <div class="caja_telefono" >
+      <div class="imagen_telefono">
+        <img th:src="@{img/tf1.png}" alt=""/>
+      </div>
+      <div class="descripcion_telefono">
+        <h3 th:text="${productos.get(0).nombre}"></h3>
+        <div class="detalles_telefono">
+          <p th:text="${productos.get(0).memoriaRam}"></p>
+          <p th:text="${productos.get(0).almacenamiento}"></p>
+          <p th:text="${productos.get(0).bateria}"></p>
+          <p th:text="${productos.get(0).SO}"></p>
+          <p th:text="${productos.get(0).camara}"></p>
+        </div>
+        <div class="btn_ver_mas">
+          <p>Ver Mas</p>
+        </div>
+        <div th:text="${productos.get(0).precio}" class="precio">
+        </div>
+      </div>
+    </div>
+    <div class="caja_telefono" >
+      <div class="imagen_telefono">
+        <img th:src="@{img/tf1.png}" alt=""/>
+      </div>
+      <div class="descripcion_telefono">
+        <h3 th:text="${productos.get(1).nombre}"></h3>
+        <div class="detalles_telefono">
+          <p th:text="${productos.get(1).memoriaRam}"></p>
+          <p th:text="${productos.get(1).almacenamiento}"></p>
+          <p th:text="${productos.get(1).bateria}"></p>
+          <p th:text="${productos.get(1).SO}"></p>
+          <p th:text="${productos.get(1).camara}"></p>
+        </div>
+        <div class="btn_ver_mas">
+          <p>Ver Mas</p>
+        </div>
+        <div th:text="${productos.get(1).precio}" class="precio">
+        </div>
+      </div>
+    </div>
+    <div class="caja_telefono" >
+      <div class="imagen_telefono">
+        <img th:src="@{img/tf1.png}" alt=""/>
+      </div>
+      <div class="descripcion_telefono">
+        <h3 th:text="${productos.get(2).nombre}"></h3>
+        <div class="detalles_telefono">
+          <p th:text="${productos.get(2).memoriaRam}"></p>
+          <p th:text="${productos.get(2).almacenamiento}"></p>
+          <p th:text="${productos.get(2).bateria}"></p>
+          <p th:text="${productos.get(2).SO}"></p>
+          <p th:text="${productos.get(2).camara}"></p>
+        </div>
+        <div class="btn_ver_mas">
+          <p>Ver Mas</p>
+        </div>
+        <div th:text="${productos.get(2).precio}" class="precio">
+        </div>
+      </div>
+    </div>
+    <div class="caja_telefono" >
+      <div class="imagen_telefono">
+        <img th:src="@{img/tf1.png}" alt=""/>
+      </div>
+      <div class="descripcion_telefono">
+        <h3 th:text="${productos.get(3).nombre}"></h3>
+        <div class="detalles_telefono">
+          <p th:text="${productos.get(3).memoriaRam}"></p>
+          <p th:text="${productos.get(3).almacenamiento}"></p>
+          <p th:text="${productos.get(3).bateria}"></p>
+          <p th:text="${productos.get(3).SO}"></p>
+          <p th:text="${productos.get(3).camara}"></p>
+        </div>
+        <div class="btn_ver_mas">
+          <p>Ver Mas</p>
+        </div>
+        <div th:text="${productos.get(3).precio}" class="precio">
+        </div>
+      </div>
+    </div>
+    <div class="caja_telefono" >
+      <div class="imagen_telefono">
+        <img th:src="@{img/tf1.png}" alt=""/>
+      </div>
+      <div class="descripcion_telefono">
+        <h3 th:text="${productos.get(4).nombre}"></h3>
+        <div class="detalles_telefono">
+          <p th:text="${productos.get(4).memoriaRam}"></p>
+          <p th:text="${productos.get(4).almacenamiento}"></p>
+          <p th:text="${productos.get(4).bateria}"></p>
+          <p th:text="${productos.get(4).SO}"></p>
+          <p th:text="${productos.get(4).camara}"></p>
+        </div>
+        <div class="btn_ver_mas">
+          <p>Ver Mas</p>
+        </div>
+        <div th:text="${productos.get(4).precio}" class="precio">
+        </div>
+      </div>
+    </div>
+    <div class="caja_telefono" >
+      <div class="imagen_telefono">
+        <img th:src="@{img/tf1.png}" alt=""/>
+      </div>
+      <div class="descripcion_telefono">
+        <h3 th:text="${productos.get(5).nombre}"></h3>
+        <div class="detalles_telefono">
+          <p th:text="${productos.get(5).memoriaRam}"></p>
+          <p th:text="${productos.get(5).almacenamiento}"></p>
+          <p th:text="${productos.get(5).bateria}"></p>
+          <p th:text="${productos.get(5).SO}"></p>
+          <p th:text="${productos.get(5).camara}"></p>
+        </div>
+        <div class="btn_ver_mas">
+          <p>Ver Mas</p>
+        </div>
+        <div th:text="${productos.get(5).precio}" class="precio">
+        </div>
+      </div>
+    </div>
+    <div class="caja_telefono" >
+      <div class="imagen_telefono">
+        <img th:src="@{img/tf1.png}" alt=""/>
+      </div>
+      <div class="descripcion_telefono">
+        <h3 th:text="${productos.get(6).nombre}"></h3>
+        <div class="detalles_telefono">
+          <p th:text="${productos.get(6).memoriaRam}"></p>
+          <p th:text="${productos.get(6).almacenamiento}"></p>
+          <p th:text="${productos.get(6).bateria}"></p>
+          <p th:text="${productos.get(6).SO}"></p>
+          <p th:text="${productos.get(6).camara}"></p>
+        </div>
+        <div class="btn_ver_mas">
+          <p>Ver Mas</p>
+        </div>
+        <div th:text="${productos.get(6).precio}" class="precio">
+        </div>
+      </div>
+    </div>
+    <div class="caja_telefono" >
+      <div class="imagen_telefono">
+        <img th:src="@{img/tf1.png}" alt=""/>
+      </div>
+      <div class="descripcion_telefono">
+        <h3 th:text="${productos.get(7).nombre}"></h3>
+        <div class="detalles_telefono">
+          <p th:text="${productos.get(7).memoriaRam}"></p>
+          <p th:text="${productos.get(7).almacenamiento}"></p>
+          <p th:text="${productos.get(7).bateria}"></p>
+          <p th:text="${productos.get(7).SO}"></p>
+          <p th:text="${productos.get(7).camara}"></p>
+        </div>
+        <div class="btn_ver_mas">
+          <p>Ver Mas</p>
+        </div>
+        <div th:text="${productos.get(7).precio}" class="precio">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="iconos_contacto">
+    <img th:src="@{img/icono_facebook.png}" alt=""/>
+    <img th:src="@{img/icono_email.png}" alt=""/>
+    <img th:src="@{img/icono_whatsap.png}" alt=""/>
+  </div>
+</footer>
+
+<script th:src="@{js/index.js}"></script>
+
 </body>
 </html>
